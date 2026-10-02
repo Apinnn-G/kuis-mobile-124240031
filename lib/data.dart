@@ -13,139 +13,151 @@ class Account {
 Account account = Account(
   username: "pindo",
   password: "124240031",
-  displayName: "Pindo",
+  displayName: "pindo",
 );
 
-class Product {
+class Shoe {
   int id;
-  String productName;
-  String type;
-  String details;
+  String shoeName;
+  String category;
+  String description;
   String price;
-  String imageUrl;
-  int likeCount;
+  String image;
+  int likes;
   int stock;
   List<String> sizes;
 
-  Product({
+  Shoe({
     required this.id,
-    required this.productName,
-    required this.type,
-    required this.details,
+    required this.shoeName,
+    required this.category,
+    required this.description,
     required this.price,
-    required this.imageUrl,
-    required this.likeCount,
+    required this.image,
+    required this.likes,
     required this.stock,
     required this.sizes,
   });
 }
 
-final List<Product> catalog = [
-  Product(
-    id: 101,
-    productName: "AIRism Cotton Oversized T-Shirt",
-    type: "T-Shirt",
-    price: "Rp199.000",
-    imageUrl: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab",
-    details: "Kaos oversized dengan bahan nyaman dan cocok digunakan untuk aktivitas sehari-hari.",
-    likeCount: 28,
-    stock: 35,
-    sizes: ["S", "M", "L", "XL"],
+final List<Shoe> shoeCatalog = [
+  Shoe(
+    id: 201,
+    shoeName: "Urban Runner X1",
+    category: "Running",
+    price: "Rp799.000",
+    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
+    description: "Sepatu running ringan dengan desain modern yang nyaman digunakan untuk aktivitas sehari-hari.",
+    likes: 34,
+    stock: 24,
+    sizes: ["39", "40", "41", "42", "43"],
   ),
 
-  Product(
-    id: 102,
-    productName: "Crew Neck Short Sleeve T-Shirt",
-    type: "T-Shirt",
-    price: "Rp149.000",
-    imageUrl: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab",
-    details: "Kaos dengan desain sederhana yang mudah dipadukan dengan berbagai jenis pakaian.",
-    likeCount: 19,
-    stock: 42,
-    sizes: ["S", "M", "L", "XL"],
-  ),
-
-  Product(
-    id: 103,
-    productName: "Graphic Print T-Shirt",
-    type: "T-Shirt",
-    price: "Rp299.000",
-    imageUrl: "https://images.unsplash.com/photo-1503341504253-dff4815485f1",
-    details: "Kaos dengan desain grafis modern untuk memberikan tampilan casual dan stylish.",
-    likeCount: 36,
-    stock: 27,
-    sizes: ["S", "M", "L"],
-  ),
-
-  Product(
-    id: 104,
-    productName: "Ultra Light Down Jacket",
-    type: "Jacket",
-    price: "Rp999.000",
-    imageUrl: "https://images.unsplash.com/photo-1548883354-94bcfe321cbb",
-    details: "Jaket ringan dengan desain praktis yang dapat digunakan untuk berbagai aktivitas.",
-    likeCount: 47,
-    stock: 18,
-    sizes: ["S", "M", "L", "XL"],
-  ),
-
-  Product(
-    id: 105,
-    productName: "Fleece Full-Zip Jacket",
-    type: "Jacket",
-    price: "Rp599.000",
-    imageUrl: "https://images.unsplash.com/photo-1551028719-00167b16eac5",
-    details: "Jaket berbahan fleece yang lembut dan memberikan rasa hangat saat digunakan.",
-    likeCount: 32,
-    stock: 23,
-    sizes: ["M", "L", "XL"],
-  ),
-
-  Product(
-    id: 106,
-    productName: "Wide Straight Jeans",
-    type: "Pants",
-    price: "Rp599.000",
-    imageUrl: "https://images.unsplash.com/photo-1542272604-787c3835535d",
-    details: "Celana jeans dengan potongan wide straight yang memberikan tampilan modern.",
-    likeCount: 41,
+  Shoe(
+    id: 202,
+    shoeName: "Street Classic Low",
+    category: "Sneakers",
+    price: "Rp649.000",
+    image: "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77",
+    description: "Sneakers bergaya klasik dengan desain sederhana yang cocok dipadukan dengan berbagai outfit.",
+    likes: 48,
     stock: 31,
-    sizes: ["28", "30", "32", "34"],
+    sizes: ["39", "40", "41", "42", "43", "44"],
   ),
 
-  Product(
-    id: 107,
-    productName: "Smart Ankle Pants",
-    type: "Pants",
-    price: "Rp499.000",
-    imageUrl: "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80",
-    details: "Celana dengan desain clean dan modern yang cocok untuk tampilan casual maupun formal.",
-    likeCount: 25,
-    stock: 26,
-    sizes: ["28", "30", "32", "34"],
+  Shoe(
+    id: 203,
+    shoeName: "Velocity Pro",
+    category: "Running",
+    price: "Rp1.199.000",
+    image: "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2",
+    description: "Sepatu performa tinggi dengan konstruksi ringan untuk mendukung aktivitas olahraga dan lari.",
+    likes: 56,
+    stock: 17,
+    sizes: ["40", "41", "42", "43", "44"],
   ),
 
-  Product(
-    id: 108,
-    productName: "Round Mini Shoulder Bag",
-    type: "Bag",
-    price: "Rp299.000",
-    imageUrl: "https://images.unsplash.com/photo-1594223274512-ad4803739b7c",
-    details: "Tas bahu berukuran compact dengan desain minimalis untuk menemani aktivitas sehari-hari.",
-    likeCount: 33,
-    stock: 15,
-    sizes: ["One Size"],
+  Shoe(
+    id: 204,
+    shoeName: "Court Max",
+    category: "Basketball",
+    price: "Rp1.499.000",
+    image: "https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111",
+    description: "Sepatu basketball dengan desain sporty dan sol yang dirancang untuk memberikan kestabilan.",
+    likes: 67,
+    stock: 14,
+    sizes: ["40", "41", "42", "43", "44"],
   ),
 
-  Product(
-    id: 109,
-    productName: "UV Protection Cap",
-    type: "Accessories",
-    price: "Rp199.000",
-    imageUrl: "https://images.unsplash.com/photo-1588850561407-ed78c282e89b",
-    details: "Topi dengan desain casual yang cocok digunakan sebagai pelengkap berbagai gaya.",
-    likeCount: 22,
-    stock: 20,
-    sizes: ["One Size"],
+  Shoe(
+    id: 205,
+    shoeName: "Daily Walk",
+    category: "Lifestyle",
+    price: "Rp549.000",
+    image: "https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3",
+    description: "Sepatu casual yang ringan dan nyaman untuk digunakan berjalan maupun aktivitas sehari-hari.",
+    likes: 29,
+    stock: 38,
+    sizes: ["38", "39", "40", "41", "42"],
+  ),
+
+  Shoe(
+    id: 206,
+    shoeName: "Retro Court 90",
+    category: "Sneakers",
+    price: "Rp899.000",
+    image: "https://images.unsplash.com/photo-1549298916-b41d501d3772",
+    description: "Sneakers bergaya retro dengan kombinasi warna klasik dan desain yang timeless.",
+    likes: 45,
+    stock: 21,
+    sizes: ["39", "40", "41", "42", "43"],
+  ),
+
+  Shoe(
+    id: 207,
+    shoeName: "Trail Explorer",
+    category: "Outdoor",
+    price: "Rp1.299.000",
+    image: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256",
+    description: "Sepatu outdoor dengan desain kokoh yang cocok digunakan untuk aktivitas di berbagai medan.",
+    likes: 38,
+    stock: 16,
+    sizes: ["40", "41", "42", "43", "44"],
+  ),
+
+  Shoe(
+    id: 208,
+    shoeName: "Cloud Step",
+    category: "Running",
+    price: "Rp949.000",
+    image: "https://images.unsplash.com/photo-1552346154-21d32810aba3",
+    description: "Sepatu dengan bantalan empuk untuk memberikan kenyamanan saat berjalan dan berlari.",
+    likes: 52,
+    stock: 27,
+    sizes: ["39", "40", "41", "42", "43"],
+  ),
+
+  Shoe(
+    id: 209,
+    shoeName: "Street Flex",
+    category: "Lifestyle",
+    price: "Rp699.000",
+    image: "https://images.unsplash.com/photo-1520256862855-398228c41684",
+    description: "Sepatu lifestyle dengan desain minimalis yang cocok digunakan untuk aktivitas santai.",
+    likes: 31,
+    stock: 33,
+    sizes: ["39", "40", "41", "42", "43"],
+  ),
+
+  Shoe(
+    id: 210,
+    shoeName: "Power Dunk",
+    category: "Basketball",
+    price: "Rp1.399.000",
+    image: "https://images.unsplash.com/photo-1556817411-31ae72fa3ea0",
+    description: "Sepatu basketball dengan desain sporty untuk menunjang pergerakan selama bermain.",
+    likes: 61,
+    stock: 12,
+    sizes: ["40", "41", "42", "43", "44"],
   ),
 ];

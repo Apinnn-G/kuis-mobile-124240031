@@ -5,7 +5,7 @@ import '../widgets.dart';
 import 'main_page.dart';
 
 const String logoUrl =
-    'https://play-lh.googleusercontent.com/bB_cyOTbQfFmV4IaeqTIFJVc1Wm4UdQwQai8GjthG4uaXrTHNZTKsMtg9_9058GeZGLgoJzIasYYdFkSvdyQ';
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Q8Ls4f_a0MIqSmz9Zj_GHOB7GvBslkNbESYWMzd9mw&s=10';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -84,7 +84,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   const SizedBox(height: 8),
                   const Text(
-                    'Selamat Datang di UNIQLO',
+                    'Selamat Datang di Toko Sepatu',
                     style: TextStyle(fontSize: 12, color: Colors.black54),
                   ),
                   const SizedBox(height: 16),

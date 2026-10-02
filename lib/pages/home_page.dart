@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../data.dart';
 import '../widgets.dart';
 import 'detail_page.dart';
@@ -13,10 +14,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   String _query = '';
 
-  List<Product> get _filtered => catalog.where((p) {
-    final matchQuery = p.productName.toLowerCase().contains(
-      _query.toLowerCase(),
-    );
+  List<Shoe> get _filtered => shoeCatalog.where((p) {
+    final matchQuery = p.shoeName.toLowerCase().contains(_query.toLowerCase());
     return matchQuery;
   }).toList();
 
@@ -55,25 +54,25 @@ class _HomePageState extends State<HomePage> {
                           horizontal: 16,
                         ),
                         leading: NetImage(
-                          url: sized(p.imageUrl, 200),
+                          url: sized(p.image, 200),
                           width: 48,
                           height: 48,
                         ),
                         title: Text(
-                          p.productName,
+                          p.shoeName,
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           style: const TextStyle(fontSize: 14),
                         ),
                         subtitle: Text(
-                          '${p.type}  •  ${p.price}',
+                          '${p.category}  •  ${p.price}',
                           style: const TextStyle(fontSize: 11),
                         ),
                         trailing: const Icon(Icons.chevron_right),
                         onTap: () => Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (_) => DetailPage(product: p),
+                            builder: (_) => DetailPage(shoe: p),
                           ),
                         ),
                       );

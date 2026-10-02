@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
+
 import '../data.dart';
 import '../widgets.dart';
 
 class DetailPage extends StatelessWidget {
-  final Product product;
-  const DetailPage({super.key, required this.product});
+  final Shoe shoe;
+  const DetailPage({super.key, required this.shoe});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(product.productName, overflow: TextOverflow.ellipsis),
+        title: Text(shoe.shoeName, overflow: TextOverflow.ellipsis),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
@@ -21,9 +22,9 @@ class DetailPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Hero(
-                  tag: 'img-${product.id}',
+                  tag: 'img-${shoe.id}',
                   child: NetImage(
-                    url: sized(product.imageUrl, 900),
+                    url: sized(shoe.image, 900),
                     width: double.infinity,
                     height: 240,
                     radius: 12,
@@ -31,7 +32,7 @@ class DetailPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 16),
                 Text(
-                  product.productName,
+                  shoe.shoeName,
                   style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w600,
@@ -39,12 +40,12 @@ class DetailPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  product.type,
+                  shoe.category,
                   style: const TextStyle(fontSize: 12, color: Colors.black45),
                 ),
                 const SizedBox(height: 12),
                 Text(
-                  product.price,
+                  shoe.price,
                   style: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
@@ -57,7 +58,7 @@ class DetailPage extends StatelessWidget {
                   style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
                 ),
                 const SizedBox(height: 4),
-                Text(product.details, style: const TextStyle(fontSize: 12)),
+                Text(shoe.description, style: const TextStyle(fontSize: 12)),
                 const SizedBox(height: 16),
                 const Text(
                   'Ukuran',
@@ -67,7 +68,7 @@ class DetailPage extends StatelessWidget {
                 Wrap(
                   spacing: 8,
                   children: [
-                    for (final s in product.sizes)
+                    for (final s in shoe.sizes)
                       Chip(
                         label: Text(s, style: const TextStyle(fontSize: 12)),
                         visualDensity: VisualDensity.compact,
@@ -79,13 +80,13 @@ class DetailPage extends StatelessWidget {
                   children: [
                     const SizedBox(width: 6),
                     Text(
-                      'Stok: ${product.stock}',
+                      'Stok: ${shoe.stock}',
                       style: const TextStyle(fontSize: 12),
                     ),
                     const SizedBox(width: 20),
                     const SizedBox(width: 6),
                     Text(
-                      '${product.likeCount} suka',
+                      '${shoe.likes} suka',
                       style: const TextStyle(fontSize: 12),
                     ),
                   ],
